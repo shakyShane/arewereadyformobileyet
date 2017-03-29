@@ -189,7 +189,7 @@ tasks:
       - '@cb exit'
 
   vue-run:
-    description: Create a production NG2 app & test in lighthouse
+    description: Create a production Vue app & test in lighthouse
     tasks:
       - vue:build
       - [vue:serve, vue:lighthouse]
