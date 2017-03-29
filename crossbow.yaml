@@ -7,6 +7,7 @@ env:
   GLIMMER_DIR: glimmer-app
   EMBER_DIR: ember-app
   CRA_DIR: cra-app
+  NG_DIR: ng-app
 
 tasks:
   (glimmer):
@@ -90,3 +91,30 @@ tasks:
     tasks:
       - cra:build
       - [cra:serve, cra:lighthouse]
+
+  (ng):
+    clean:
+      - '@sh rm -rf $NG_DIR'
+    init: >
+      @npm ng new $NG_DIR
+    build: >
+      @npm cd $NG_DIR
+      && ng build --aot --target=production
+    serve: >
+      @sh pushstate-server $NG_DIR/dist $PORT
+    perf-battle: >
+      @sh node $LH_BIN
+      http://localhost:$PORT
+      --reporter size
+      --output json
+      --outFile results/ng.json
+
+    lighthouse:
+      - ng:perf-battle
+      - '@cb exit'
+
+  ng-run:
+    description: Create a production NG2 app & test in lighthouse
+    tasks:
+      - ng:build
+      - [ng:serve, ng:lighthouse]

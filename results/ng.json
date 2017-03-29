@@ -1,0 +1,125 @@
+{
+  ".js": {
+    "items": [
+      {
+        "url": "/vendor.f36e67a….bundle.js",
+        "totalBytes": 71552,
+        "totalKb": "70 KB",
+        "totalMs": "330ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "vendor.f36e67a….bundle.js",
+          "ext": ".js",
+          "name": "vendor.f36e67a….bundle"
+        }
+      },
+      {
+        "url": "/polyfills.2d45a4c….bundle.js",
+        "totalBytes": 19396,
+        "totalKb": "19 KB",
+        "totalMs": "90ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "polyfills.2d45a4c….bundle.js",
+          "ext": ".js",
+          "name": "polyfills.2d45a4c….bundle"
+        }
+      },
+      {
+        "url": "/main.34c7a68….bundle.js",
+        "totalBytes": 2531,
+        "totalKb": "2 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "main.34c7a68….bundle.js",
+          "ext": ".js",
+          "name": "main.34c7a68….bundle"
+        }
+      },
+      {
+        "url": "/inline.1a4182d….bundle.js",
+        "totalBytes": 1155,
+        "totalKb": "1 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "inline.1a4182d….bundle.js",
+          "ext": ".js",
+          "name": "inline.1a4182d….bundle"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 94634,
+      "pretty": "94.6 kB"
+    }
+  },
+  ".ico": {
+    "items": [
+      {
+        "url": "/favicon.ico",
+        "totalBytes": 1729,
+        "totalKb": "2 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "favicon.ico",
+          "ext": ".ico",
+          "name": "favicon"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 1729,
+      "pretty": "1.73 kB"
+    }
+  },
+  "": {
+    "items": [
+      {
+        "url": "/",
+        "totalBytes": 992,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "",
+          "ext": "",
+          "name": ""
+        }
+      }
+    ],
+    "total": {
+      "bytes": 992,
+      "pretty": "992 B"
+    }
+  },
+  ".css": {
+    "items": [
+      {
+        "url": "/styles.d41d8cd….bundle.css",
+        "totalBytes": 288,
+        "totalKb": "0 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "styles.d41d8cd….bundle.css",
+          "ext": ".css",
+          "name": "styles.d41d8cd….bundle"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 288,
+      "pretty": "288 B"
+    }
+  }
+}
