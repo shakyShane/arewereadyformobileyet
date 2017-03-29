@@ -8,10 +8,21 @@ env:
   GLIMMER_DIR: glimmer-app
   EMBER_DIR: ember-app
   CRA_DIR: cra-app
-  NG_DIR: ng-app
   CPA_DIR: cpa-app
+  NG_DIR: ng-app
+  VUE_DIR: vue-app
 
 tasks:
+
+  (install)
+    global: >
+      @sh yarn global add
+      create-react-app
+      create-preact-app
+      ember-cli/ember-cli
+      vue-cli
+      @angular/cli
+      perf-battle
 
   ## Glimmer.js
   (glimmer):
@@ -153,3 +164,32 @@ tasks:
     tasks:
       - ng:build
       - [ng:serve, ng:lighthouse]
+
+  ### Vue js
+  (vue):
+    clean:
+      - '@sh rm -rf $VUE_DIR'
+    init: >
+      @npm vue init webpack $VUE_DIR
+    build: >
+      @npm cd $VUE_DIR
+      && yarn
+      && yarn run build
+    serve: >
+      @sh pushstate-server $VUE_DIR/dist $PORT
+    perf-battle: >
+      @sh node $LH_BIN
+      http://localhost:$PORT
+      --reporter size
+      --output json
+      --outFile results/vue.json
+
+    lighthouse:
+      - vue:perf-battle
+      - '@cb exit'
+
+  vue-run:
+    description: Create a production NG2 app & test in lighthouse
+    tasks:
+      - vue:build
+      - [vue:serve, vue:lighthouse]

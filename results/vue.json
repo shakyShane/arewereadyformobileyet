@@ -1,0 +1,112 @@
+{
+  ".js": {
+    "items": [
+      {
+        "url": "…js/vendor.94202f7….js",
+        "totalBytes": 36628,
+        "totalKb": "36 KB",
+        "totalMs": "170ms",
+        "parsed": {
+          "root": "",
+          "dir": "…js",
+          "base": "vendor.94202f7….js",
+          "ext": ".js",
+          "name": "vendor.94202f7…"
+        }
+      },
+      {
+        "url": "…js/app.e592187….js",
+        "totalBytes": 8087,
+        "totalKb": "8 KB",
+        "totalMs": "40ms",
+        "parsed": {
+          "root": "",
+          "dir": "…js",
+          "base": "app.e592187….js",
+          "ext": ".js",
+          "name": "app.e592187…"
+        }
+      },
+      {
+        "url": "…js/manifest.1a71ed3….js",
+        "totalBytes": 1188,
+        "totalKb": "1 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "",
+          "dir": "…js",
+          "base": "manifest.1a71ed3….js",
+          "ext": ".js",
+          "name": "manifest.1a71ed3…"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 45903,
+      "pretty": "45.9 kB"
+    }
+  },
+  "": {
+    "items": [
+      {
+        "url": "/",
+        "totalBytes": 737,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "",
+          "ext": "",
+          "name": ""
+        }
+      }
+    ],
+    "total": {
+      "bytes": 737,
+      "pretty": "737 B"
+    }
+  },
+  ".ico": {
+    "items": [
+      {
+        "url": "/favicon.ico",
+        "totalBytes": 736,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "favicon.ico",
+          "ext": ".ico",
+          "name": "favicon"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 736,
+      "pretty": "736 B"
+    }
+  },
+  ".css": {
+    "items": [
+      {
+        "url": "…css/app.677901b….css",
+        "totalBytes": 655,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "",
+          "dir": "…css",
+          "base": "app.677901b….css",
+          "ext": ".css",
+          "name": "app.677901b…"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 655,
+      "pretty": "655 B"
+    }
+  }
+}
