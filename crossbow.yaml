@@ -4,12 +4,16 @@ config:
 env:
   PORT: 9000
   LH_BIN: /Users/shakyshane/Sites/oss/perf-battle/dist/index.js
+
   GLIMMER_DIR: glimmer-app
   EMBER_DIR: ember-app
   CRA_DIR: cra-app
   NG_DIR: ng-app
+  CPA_DIR: cpa-app
 
 tasks:
+
+  ## Glimmer.js
   (glimmer):
     clean:
       - '@sh rm -rf $GLIMMER_DIR'
@@ -37,7 +41,7 @@ tasks:
       - glimmer:build
       - [glimmer:serve, glimmer:lighthouse]
 
-
+  ## Ember.js
   (ember):
     clean:
       - '@sh rm -rf $EMBER_DIR'
@@ -65,6 +69,7 @@ tasks:
       - ember:build
       - [ember:serve, ember:lighthouse]
 
+  ### Create React App
   (cra):
     clean:
       - '@sh rm -rf $CRA_DIR'
@@ -92,6 +97,36 @@ tasks:
       - cra:build
       - [cra:serve, cra:lighthouse]
 
+  ### Create *Preact App
+  (cpa):
+    clean:
+      - '@sh rm -rf $CPA_DIR'
+    init: >
+      @npm create-preact-app $CPA_DIR
+    build: >
+      @sh cd $CPA_DIR
+      && yarn run build
+    serve: >
+      @sh pushstate-server $CPA_DIR/build $PORT
+    perf-battle: >
+      @sh node $LH_BIN
+      http://localhost:$PORT
+      --reporter size
+      --output json
+      --outFile results/cpa.json
+
+    lighthouse:
+      - cpa:perf-battle
+      - '@cb exit'
+
+  cpa-run:
+    description: Create production *Preact app & test in lighthouse
+    tasks:
+      - cpa:build
+      - [cpa:serve, cpa:lighthouse]
+
+
+  ### ANGULAR 2
   (ng):
     clean:
       - '@sh rm -rf $NG_DIR'
