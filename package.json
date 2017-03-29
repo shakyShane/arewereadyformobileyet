@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "crossbow": "^4.1.0",
+    "perf-battle": "^1.0.1"
+  }
+}

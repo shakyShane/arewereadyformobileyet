@@ -3,7 +3,7 @@ config:
 
 env:
   PORT: 9000
-  LH_BIN: /Users/shakyshane/Sites/oss/perf-battle/dist/index.js
+  LH_BIN: perf-battle
 
   GLIMMER_DIR: glimmer-app
   EMBER_DIR: ember-app
@@ -14,7 +14,7 @@ env:
 
 tasks:
 
-  (install)
+  (install):
     global: >
       @sh yarn global add
       create-react-app
@@ -36,7 +36,7 @@ tasks:
     serve: >
       @sh pushstate-server $GLIMMER_DIR/dist $PORT
     perf-battle: >
-      @sh node $LH_BIN
+      @npm perf-battle
       http://localhost:$PORT
       --reporter size
       --output json
@@ -64,7 +64,7 @@ tasks:
     serve: >
       @sh pushstate-server $EMBER_DIR/dist $PORT
     perf-battle: >
-      @sh node $LH_BIN
+      @npm perf-battle
       http://localhost:$PORT
       --reporter size
       --output json
@@ -92,7 +92,7 @@ tasks:
     serve: >
       @sh pushstate-server $CRA_DIR/build $PORT
     perf-battle: >
-      @sh node $LH_BIN
+      @npm perf-battle
       http://localhost:$PORT
       --reporter size
       --output json
@@ -120,7 +120,7 @@ tasks:
     serve: >
       @sh pushstate-server $CPA_DIR/build $PORT
     perf-battle: >
-      @sh node $LH_BIN
+      @npm perf-battle
       http://localhost:$PORT
       --reporter size
       --output json
@@ -149,7 +149,7 @@ tasks:
     serve: >
       @sh pushstate-server $NG_DIR/dist $PORT
     perf-battle: >
-      @sh node $LH_BIN
+      @npm perf-battle
       http://localhost:$PORT
       --reporter size
       --output json
@@ -178,7 +178,7 @@ tasks:
     serve: >
       @sh pushstate-server $VUE_DIR/dist $PORT
     perf-battle: >
-      @sh node $LH_BIN
+      @npm perf-battle
       http://localhost:$PORT
       --reporter size
       --output json
