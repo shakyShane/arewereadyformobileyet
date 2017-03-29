@@ -1,0 +1,107 @@
+{
+  ".js": {
+    "items": [
+      {
+        "url": "…js/main.4268d1ce.js",
+        "totalBytes": 47727,
+        "totalKb": "47 KB",
+        "totalMs": "210ms",
+        "parsed": {
+          "root": "",
+          "dir": "…js",
+          "base": "main.4268d1ce.js",
+          "ext": ".js",
+          "name": "main.4268d1ce"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 47727,
+      "pretty": "47.7 kB"
+    }
+  },
+  ".ico": {
+    "items": [
+      {
+        "url": "/favicon.ico",
+        "totalBytes": 4049,
+        "totalKb": "4 KB",
+        "totalMs": "20ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "favicon.ico",
+          "ext": ".ico",
+          "name": "favicon"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 4049,
+      "pretty": "4.05 kB"
+    }
+  },
+  ".svg": {
+    "items": [
+      {
+        "url": "…media/logo.5d5d9eef.svg",
+        "totalBytes": 1638,
+        "totalKb": "2 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "",
+          "dir": "…media",
+          "base": "logo.5d5d9eef.svg",
+          "ext": ".svg",
+          "name": "logo.5d5d9eef"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 1638,
+      "pretty": "1.64 kB"
+    }
+  },
+  ".css": {
+    "items": [
+      {
+        "url": "…css/main.9a0fe4f1.css",
+        "totalBytes": 915,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "",
+          "dir": "…css",
+          "base": "main.9a0fe4f1.css",
+          "ext": ".css",
+          "name": "main.9a0fe4f1"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 915,
+      "pretty": "915 B"
+    }
+  },
+  "": {
+    "items": [
+      {
+        "url": "/",
+        "totalBytes": 671,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "",
+          "ext": "",
+          "name": ""
+        }
+      }
+    ],
+    "total": {
+      "bytes": 671,
+      "pretty": "671 B"
+    }
+  }
+}

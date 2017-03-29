@@ -6,6 +6,7 @@ env:
   LH_BIN: /Users/shakyshane/Sites/oss/perf-battle/dist/index.js
   GLIMMER_DIR: glimmer-app
   EMBER_DIR: ember-app
+  CRA_DIR: cra-app
 
 tasks:
   (glimmer):
@@ -62,3 +63,30 @@ tasks:
     tasks:
       - ember:build
       - [ember:serve, ember:lighthouse]
+
+  (cra):
+    clean:
+      - '@sh rm -rf $CRA_DIR'
+    init: >
+      @npm create-react-app $CRA_DIR
+    build: >
+      @sh cd $CRA_DIR
+      && yarn run build
+    serve: >
+      @sh pushstate-server $CRA_DIR/build $PORT
+    perf-battle: >
+      @sh node $LH_BIN
+      http://localhost:$PORT
+      --reporter size
+      --output json
+      --outFile results/cra.json
+
+    lighthouse:
+      - cra:perf-battle
+      - '@cb exit'
+
+  cra-run:
+    description: Create production React app & test in lighthouse
+    tasks:
+      - cra:build
+      - [cra:serve, cra:lighthouse]
