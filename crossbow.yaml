@@ -1,22 +1,64 @@
 config:
   progress: true
+
+env:
+  PORT: 9000
+  LH_BIN: /Users/shakyshane/Sites/oss/perf-battle/dist/index.js
+  GLIMMER_DIR: glimmer-app
+  EMBER_DIR: ember-app
+
 tasks:
   (glimmer):
     clean:
-      - '@sh rm -rf glimmer-app'
-    init:  >
-      @npm ember new glimmer-app -b @glimmer/blueprint
+      - '@sh rm -rf $GLIMMER_DIR'
+    init: >
+      @npm ember new $GLIMMER_DIR -b @glimmer/blueprint
     build: >
-      @sh cd glimmer-app
+      @sh cd $GLIMMER_DIR
       && ember build --environment="production"
-    serve: '@bg pushstate-server glimmer-app/dist 9000'
-    stats: >
-      @sh node /Users/shakyshane/Sites/oss/perf-battle/dist/index.js
-      http://localhost:9000
+    serve: >
+      @sh pushstate-server $GLIMMER_DIR/dist $PORT
+    perf-battle: >
+      @sh node $LH_BIN
+      http://localhost:$PORT
       --reporter size
       --output json
-      --outFile glimmer.json
-    test:
-      - glimmer:serve
-      - glimmer:stats
+      --outFile results/glimmer.json
 
+    lighthouse:
+      - glimmer:perf-battle
+      - '@cb exit'
+
+  glimmer-run:
+    description: Create production Glimmer app & test in lighthouse
+    tasks:
+      - glimmer:build
+      - [glimmer:serve, glimmer:lighthouse]
+
+
+  (ember):
+    clean:
+      - '@sh rm -rf $EMBER_DIR'
+    init: >
+      @npm ember new $EMBER_DIR
+    build: >
+      @sh cd $EMBER_DIR
+      && ember build --environment="production"
+    serve: >
+      @sh pushstate-server $EMBER_DIR/dist $PORT
+    perf-battle: >
+      @sh node $LH_BIN
+      http://localhost:$PORT
+      --reporter size
+      --output json
+      --outFile results/ember.json
+
+    lighthouse:
+      - ember:perf-battle
+      - '@cb exit'
+
+  ember-run:
+    description: Create production Ember app & test in lighthouse
+    tasks:
+      - ember:build
+      - [ember:serve, ember:lighthouse]

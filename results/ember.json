@@ -1,0 +1,138 @@
+{
+  ".js": {
+    "items": [
+      {
+        "url": "…assets/vendor-762ee20….js",
+        "totalBytes": 203077,
+        "totalKb": "198 KB",
+        "totalMs": "960ms",
+        "parsed": {
+          "root": "",
+          "dir": "…assets",
+          "base": "vendor-762ee20….js",
+          "ext": ".js",
+          "name": "vendor-762ee20…"
+        }
+      },
+      {
+        "url": "…assets/ember-app-3e61472….js",
+        "totalBytes": 1769,
+        "totalKb": "2 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "",
+          "dir": "…assets",
+          "base": "ember-app-3e61472….js",
+          "ext": ".js",
+          "name": "ember-app-3e61472…"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 204846,
+      "pretty": "205 kB"
+    }
+  },
+  "": {
+    "items": [
+      {
+        "url": "/",
+        "totalBytes": 1243,
+        "totalKb": "1 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "",
+          "ext": "",
+          "name": ""
+        }
+      }
+    ],
+    "total": {
+      "bytes": 1243,
+      "pretty": "1.24 kB"
+    }
+  },
+  ".css": {
+    "items": [
+      {
+        "url": "…assets/vendor.css",
+        "totalBytes": 1242,
+        "totalKb": "1 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "",
+          "dir": "…assets",
+          "base": "vendor.css",
+          "ext": ".css",
+          "name": "vendor"
+        }
+      },
+      {
+        "url": "…assets/ember-app-d41d8cd….css",
+        "totalBytes": 288,
+        "totalKb": "0 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "",
+          "dir": "…assets",
+          "base": "ember-app-d41d8cd….css",
+          "ext": ".css",
+          "name": "ember-app-d41d8cd…"
+        }
+      },
+      {
+        "url": "…assets/ember-app-d41d8cd….css",
+        "totalBytes": 288,
+        "totalKb": "0 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "",
+          "dir": "…assets",
+          "base": "ember-app-d41d8cd….css",
+          "ext": ".css",
+          "name": "ember-app-d41d8cd…"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 1818,
+      "pretty": "1.82 kB"
+    }
+  },
+  ".ico": {
+    "items": [
+      {
+        "url": "/favicon.ico",
+        "totalBytes": 1242,
+        "totalKb": "1 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "favicon.ico",
+          "ext": ".ico",
+          "name": "favicon"
+        }
+      },
+      {
+        "url": "/favicon.ico",
+        "totalBytes": 1242,
+        "totalKb": "1 KB",
+        "totalMs": "10ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "favicon.ico",
+          "ext": ".ico",
+          "name": "favicon"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 2484,
+      "pretty": "2.48 kB"
+    }
+  }
+}
