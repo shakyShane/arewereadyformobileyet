@@ -1,0 +1,22 @@
+config:
+  progress: true
+tasks:
+  (glimmer):
+    clean:
+      - '@sh rm -rf glimmer-app'
+    init:  >
+      @npm ember new glimmer-app -b @glimmer/blueprint
+    build: >
+      @sh cd glimmer-app
+      && ember build --environment="production"
+    serve: '@bg pushstate-server glimmer-app/dist 9000'
+    stats: >
+      @sh node /Users/shakyshane/Sites/oss/perf-battle/dist/index.js
+      http://localhost:9000
+      --reporter size
+      --output json
+      --outFile glimmer.json
+    test:
+      - glimmer:serve
+      - glimmer:stats
+
