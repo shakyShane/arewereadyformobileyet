@@ -20,6 +20,7 @@ tasks:
       @sh yarn global add
       create-react-app
       create-preact-app
+      create-inferno-app
       ember-cli/ember-cli
       vue-cli
       @angular/cli
