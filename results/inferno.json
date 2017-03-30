@@ -1,0 +1,86 @@
+{
+  ".js": {
+    "items": [
+      {
+        "url": "…js/main.84098ec8.js",
+        "totalBytes": 17472,
+        "totalKb": "17 KB",
+        "totalMs": "70ms",
+        "parsed": {
+          "root": "",
+          "dir": "…js",
+          "base": "main.84098ec8.js",
+          "ext": ".js",
+          "name": "main.84098ec8"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 17472,
+      "pretty": "17.5 kB"
+    }
+  },
+  ".ico": {
+    "items": [
+      {
+        "url": "/favicon.ico",
+        "totalBytes": 918,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "favicon.ico",
+          "ext": ".ico",
+          "name": "favicon"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 918,
+      "pretty": "918 B"
+    }
+  },
+  ".css": {
+    "items": [
+      {
+        "url": "…css/main.5995f482.css",
+        "totalBytes": 712,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "",
+          "dir": "…css",
+          "base": "main.5995f482.css",
+          "ext": ".css",
+          "name": "main.5995f482"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 712,
+      "pretty": "712 B"
+    }
+  },
+  "": {
+    "items": [
+      {
+        "url": "/",
+        "totalBytes": 689,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "",
+          "ext": "",
+          "name": ""
+        }
+      }
+    ],
+    "total": {
+      "bytes": 689,
+      "pretty": "689 B"
+    }
+  }
+}

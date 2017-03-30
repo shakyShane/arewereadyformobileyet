@@ -18,6 +18,7 @@ with as little vendor code as possible to reduce size). But I will add more metr
 |Framework|JS Bundle Size (compressed, as served in the browser)|
 |---|---|
 |Preact|9.29 kB|
+|Inferno|17.5 kB|
 |Glimmer|34.7 kB|
 |Vue|45.9 kB|
 |React|47.7 kB|

@@ -11,6 +11,7 @@ env:
   CPA_DIR: cpa-app
   NG_DIR: ng-app
   VUE_DIR: vue-app
+  INFERNO_DIR: inferno-app
 
 tasks:
 
@@ -107,6 +108,34 @@ tasks:
     tasks:
       - cra:build
       - [cra:serve, cra:lighthouse]
+
+  ### Create Inferno App
+  (inferno):
+    clean:
+      - '@sh rm -rf $INFERNO_DIR'
+    init: >
+      @npm create-inferno-app $INFERNO_DIR
+    build: >
+      @sh cd $INFERNO_DIR
+      && yarn run build
+    serve: >
+      @sh pushstate-server $INFERNO_DIR/build $PORT
+    perf-battle: >
+      @npm perf-battle
+      http://localhost:$PORT
+      --reporter size
+      --output json
+      --outFile results/inferno.json
+
+    lighthouse:
+      - inferno:perf-battle
+      - '@cb exit'
+
+  inferno-run:
+    description: Create production Inferno app & test in lighthouse
+    tasks:
+      - inferno:build
+      - [inferno:serve, inferno:lighthouse]
 
   ### Create *Preact App
   (cpa):

@@ -6,7 +6,8 @@ const files = [
     ["Ember", "ember.json"],
     ["Glimmer", "glimmer.json"],
     ["Angular", "ng.json"],
-    ["Vue", "vue.json"]
+    ["Vue", "vue.json"],
+    ["Inferno", "inferno.json"]
 ];
 const read = files.map(x => {
     return {
