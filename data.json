@@ -1,0 +1,30 @@
+{
+  "cpa": {
+    "title": "Create Preact App",
+    "framework": "Preact"
+  },
+  "cra": {
+    "title": "Create React App",
+    "framework": "React"
+  },
+  "ember": {
+    "title": "Ember CLI",
+    "framework": "Ember"
+  },
+  "glimmer": {
+    "title": "Ember CLI",
+    "framework": "Glimmer"
+  },
+  "ng": {
+    "title": "Angular CLI",
+    "framework": "Angular 2"
+  },
+  "vue": {
+    "title": "Vue CLI",
+    "framework": "Vue"
+  },
+  "inferno": {
+    "title": "Create Inferno App",
+    "framework": "Inferno"
+  }
+}

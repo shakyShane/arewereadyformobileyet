@@ -17,13 +17,13 @@ with as little vendor code as possible to reduce size). But I will add more metr
 <!--perf:js-start-->
 |Framework|JS Bundle Size (compressed, as served in the browser)|
 |---|---|
-|Preact|9.29 kB|
-|Inferno|17.5 kB|
-|Glimmer|34.7 kB|
-|Vue|45.9 kB|
-|React|47.7 kB|
-|Angular|94.6 kB|
-|Ember|205 kB|
+|Preact (Create Preact App)|9.29 kB|
+|Inferno (Create Inferno App)|17.5 kB|
+|Glimmer (Ember CLI)|34.7 kB|
+|Vue (Vue CLI)|45.9 kB|
+|React (Create React App)|47.7 kB|
+|Angular 2 (Angular CLI)|94.6 kB|
+|Ember (Ember CLI)|205 kB|
 <!--perf:js-end-->
 
 ## Up next

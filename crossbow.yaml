@@ -1,6 +1,22 @@
 config:
   progress: true
 
+frameworks:
+  glimmer:
+    title: Glimmer
+  inferno:
+    title: Inferno
+  ember:
+    title: Ember
+  ng:
+    title: Angular
+  cra:
+    title: React
+  cpa:
+    title: Preact
+  vue:
+    title: Vue
+
 env:
   PORT: 9000
   LH_BIN: perf-battle

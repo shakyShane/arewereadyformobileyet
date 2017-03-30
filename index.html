@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        width: 960px;
+        height: 500px;
+        position: relative;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        position: center;
+    }
+
+    .toolTip {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        position: absolute;
+        display: none;
+        width: auto;
+        height: auto;
+        background: none repeat scroll 0 0 white;
+        border: 0 none;
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: -3px 3px 15px #888888;
+        color: black;
+        font: 12px sans-serif;
+        padding: 5px;
+        text-align: center;
+    }
+
+    text {
+        font: 10px sans-serif;
+        color: white;
+    }
+    text.value {
+        font-size: 120%;
+        fill: white;
+    }
+
+    .axisHorizontal path{
+        fill: none;
+    }
+
+    .axisHorizontal .tick line {
+        stroke-width: 1;
+        stroke: rgba(0, 0, 0, 0.2);
+    }
+
+    .bar {
+        fill: steelblue;
+        fill-opacity: .9;
+    }
+
+</style>
+<body>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+
+    run();
+
+    async function run() {
+
+    resp = await fetch('generated.json');
+    const json = await resp.json();
+
+    const data = json.map((item) => {
+        return {
+            label: item.item.framework,
+            value: parseFloat((item.json.total.bytes/1000).toFixed(2)),
+            img: item.img
+        };
+    });
+
+    var div = d3.select("body").append("div").attr("class", "toolTip");
+
+    var axisMargin = 20,
+        margin = 40,
+        valueMargin = 4,
+        width = parseInt(d3.select('body').style('width'), 10),
+        height = parseInt(d3.select('body').style('height'), 10),
+        barHeight = (height-axisMargin-margin*2)* 0.4/data.length,
+        barPadding = (height-axisMargin-margin*2)*0.6/data.length,
+        bar, svg, scale, xAxis, labelWidth = 0;
+
+    max = d3.max(data, function(d) { return d.value; });
+
+    svg = d3.select('body')
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+
+    bar = svg.selectAll("g")
+        .data(data)
+        .enter()
+        .append("g");
+
+    bar.attr("class", "bar")
+        .attr("cx",0)
+        .attr("transform", function(d, i) {
+            return "translate(" + margin + "," + (i * (barHeight + barPadding) + barPadding) + ")";
+        });
+
+    bar.append("svg:image")
+        .attr('width', 50)
+        .attr('height', 50)
+        //        .attr("class", "label")
+        .attr("y", -12)
+        //        .attr("dy", ".35em") //vertical align middle
+        .attr("xlink:href",function (d) {
+            return d.img;
+        })
+        .each(function() {
+        labelWidth = Math.ceil(Math.max(labelWidth, this.getBBox().width));
+    });
+
+    scale = d3.scale.linear()
+        .domain([0, max])
+        .range([0, width - margin*2 - labelWidth]);
+
+    xAxis = d3.svg.axis()
+        .scale(scale)
+        .tickSize(-height + 2*margin + axisMargin)
+        .orient("bottom");
+
+    bar.append("rect")
+        .attr("transform", "translate("+labelWidth+", 0)")
+        .attr("height", barHeight)
+        .attr("width", function(d){
+            return scale(d.value);
+        });
+
+    bar.append("text")
+        .attr("class", "value")
+        .attr("y", barHeight / 2)
+        .attr("dx", -valueMargin + labelWidth) //margin right
+        .attr("dy", ".35em") //vertical align middle
+        .attr("text-anchor", "end")
+        .text(function(d){
+            return (d.value+"KB");
+        })
+        .attr("x", function(d){
+            var width = this.getBBox().width;
+            return Math.max(width + valueMargin, scale(d.value));
+        });
+
+    bar
+        .on("mousemove", function(d){
+            div.style("left", d3.event.pageX+10+"px");
+            div.style("top", d3.event.pageY-25+"px");
+            div.style("display", "inline-block");
+            div.html((d.label)+"<br>"+(d.value)+"KB");
+        });
+    bar
+        .on("mouseout", function(d){
+            div.style("display", "none");
+        });
+
+    svg.insert("g",":first-child")
+        .attr("class", "axisHorizontal")
+        .attr("transform", "translate(" + (margin + labelWidth) + ","+ (height - axisMargin - margin)+")")
+        .call(xAxis);
+
+    }
+
+</script>
+</body>
