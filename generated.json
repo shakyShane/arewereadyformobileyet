@@ -2,7 +2,8 @@
   {
     "item": {
       "title": "Create Preact App",
-      "framework": "Preact"
+      "framework": "Preact",
+      "firstRender": 412
     },
     "json": {
       "items": [
@@ -30,7 +31,8 @@
   {
     "item": {
       "title": "Create Inferno App",
-      "framework": "Inferno"
+      "framework": "Inferno",
+      "firstRender": 737
     },
     "json": {
       "items": [
@@ -58,7 +60,8 @@
   {
     "item": {
       "title": "Ember CLI",
-      "framework": "Glimmer"
+      "framework": "Glimmer",
+      "firstRender": 1000
     },
     "json": {
       "items": [
@@ -86,7 +89,8 @@
   {
     "item": {
       "title": "Vue CLI",
-      "framework": "Vue"
+      "framework": "Vue",
+      "firstRender": 840
     },
     "json": {
       "items": [
@@ -140,7 +144,8 @@
   {
     "item": {
       "title": "Create React App",
-      "framework": "React"
+      "framework": "React",
+      "firstRender": 770
     },
     "json": {
       "items": [
@@ -168,7 +173,8 @@
   {
     "item": {
       "title": "Angular CLI",
-      "framework": "Angular 2"
+      "framework": "Angular 2",
+      "firstRender": 1500
     },
     "json": {
       "items": [
@@ -235,7 +241,8 @@
   {
     "item": {
       "title": "Ember CLI",
-      "framework": "Ember"
+      "framework": "Ember",
+      "firstRender": 4200
     },
     "json": {
       "items": [

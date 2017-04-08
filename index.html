@@ -71,10 +71,11 @@
     const data = json.map((item) => {
         return {
             label: item.item.framework,
-            value: parseFloat((item.json.total.bytes/1000).toFixed(2)),
+//            value: parseFloat((item.json.total.bytes/1000).toFixed(2)),
+            value: item.item.firstRender,
             img: item.img
         };
-    });
+    }).sort((a, b) => a.value - b.value);
 
     var div = d3.select("body").append("div").attr("class", "toolTip");
 
@@ -142,7 +143,7 @@
         .attr("dy", ".35em") //vertical align middle
         .attr("text-anchor", "end")
         .text(function(d){
-            return (d.value+"KB");
+            return (d.value+"ms");
         })
         .attr("x", function(d){
             var width = this.getBBox().width;
@@ -154,7 +155,7 @@
             div.style("left", d3.event.pageX+10+"px");
             div.style("top", d3.event.pageY-25+"px");
             div.style("display", "inline-block");
-            div.html((d.label)+"<br>"+(d.value)+"KB");
+            div.html((d.label)+"<br>"+(d.value)+"ms");
         });
     bar
         .on("mouseout", function(d){

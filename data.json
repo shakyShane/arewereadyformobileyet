@@ -1,30 +1,37 @@
 {
   "cpa": {
     "title": "Create Preact App",
-    "framework": "Preact"
+    "framework": "Preact",
+    "firstRender": 412
   },
   "cra": {
     "title": "Create React App",
-    "framework": "React"
+    "framework": "React",
+    "firstRender": 770
   },
   "ember": {
     "title": "Ember CLI",
-    "framework": "Ember"
+    "framework": "Ember",
+    "firstRender": 4200
   },
   "glimmer": {
     "title": "Ember CLI",
-    "framework": "Glimmer"
+    "framework": "Glimmer",
+    "firstRender": 1000
   },
   "ng": {
     "title": "Angular CLI",
-    "framework": "Angular 2"
+    "framework": "Angular 2",
+    "firstRender": 1500
   },
   "vue": {
     "title": "Vue CLI",
-    "framework": "Vue"
+    "framework": "Vue",
+    "firstRender": 840
   },
   "inferno": {
     "title": "Create Inferno App",
-    "framework": "Inferno"
+    "framework": "Inferno",
+    "firstRender": 737
   }
 }
