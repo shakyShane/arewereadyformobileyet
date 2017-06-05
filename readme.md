@@ -48,7 +48,7 @@ $ crossbow run <taskname>
 |<pre>`glimmer-run`</pre>|Create production Glimmer app & test in lighthouse|
 |<pre>`ember-run`</pre>|Create production Ember app & test in lighthouse|
 |<pre>`cra-run`</pre>|Create production React app & test in lighthouse|
-|<pre>`cpa-run`</pre>|Create production *Preact app & test in lighthouse|
+|<pre>`preact-run`</pre>|Create production *Preact app & test in lighthouse|
 |<pre>`ng-run`</pre>|Create a production NG2 app & test in lighthouse|
 |<pre>`vue-run`</pre>|Create a production Vue app & test in lighthouse|
 |<pre>`install:global`</pre>|**Alias for:**<br>- `@sh yarn global add create-react-app create-preact-app ember-cli/ember-cli vue-cli @angular/cli perf-battle`|
@@ -70,12 +70,12 @@ $ crossbow run <taskname>
 |<pre>`cra:serve`</pre>|**Alias for:**<br>- `@sh pushstate-server $CRA_DIR/build $PORT`|
 |<pre>`cra:perf-battle`</pre>|**Alias for:**<br>- `@npm perf-battle http://localhost:$PORT --reporter size --output json --outFile results/cra.json`|
 |<pre>`cra:lighthouse`</pre>|**Alias for:**<br>- `cra:perf-battle`<br>- `@cb exit`|
-|<pre>`cpa:clean`</pre>|**Alias for:**<br>- `@sh rm -rf $CPA_DIR`|
-|<pre>`cpa:init`</pre>|**Alias for:**<br>- `@npm create-preact-app $CPA_DIR`|
-|<pre>`cpa:build`</pre>|**Alias for:**<br>- `@sh cd $CPA_DIR && yarn run build`|
-|<pre>`cpa:serve`</pre>|**Alias for:**<br>- `@sh pushstate-server $CPA_DIR/build $PORT`|
-|<pre>`cpa:perf-battle`</pre>|**Alias for:**<br>- `@npm perf-battle http://localhost:$PORT --reporter size --output json --outFile results/cpa.json`|
-|<pre>`cpa:lighthouse`</pre>|**Alias for:**<br>- `cpa:perf-battle`<br>- `@cb exit`|
+|<pre>`preact:clean`</pre>|**Alias for:**<br>- `@sh rm -rf $PREACT_DIR`|
+|<pre>`preact:init`</pre>|**Alias for:**<br>- `@npm create-preact-app $PREACT_DIR`|
+|<pre>`preact:build`</pre>|**Alias for:**<br>- `@sh cd $PREACT_DIR && yarn run build`|
+|<pre>`preact:serve`</pre>|**Alias for:**<br>- `@sh pushstate-server $PREACT_DIR/build $PORT`|
+|<pre>`preact:perf-battle`</pre>|**Alias for:**<br>- `@npm perf-battle http://localhost:$PORT --reporter size --output json --outFile results/preact.json`|
+|<pre>`preact:lighthouse`</pre>|**Alias for:**<br>- `preact:perf-battle`<br>- `@cb exit`|
 |<pre>`ng:clean`</pre>|**Alias for:**<br>- `@sh rm -rf $NG_DIR`|
 |<pre>`ng:init`</pre>|**Alias for:**<br>- `@npm ng new $NG_DIR`|
 |<pre>`ng:build`</pre>|**Alias for:**<br>- `@npm cd $NG_DIR && ng build --aot --target=production`|

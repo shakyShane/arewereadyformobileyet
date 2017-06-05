@@ -12,7 +12,7 @@ frameworks:
     title: Angular
   cra:
     title: React
-  cpa:
+  preact:
     title: Preact
   vue:
     title: Vue
@@ -24,7 +24,7 @@ env:
   GLIMMER_DIR: glimmer-app
   EMBER_DIR: ember-app
   CRA_DIR: cra-app
-  CPA_DIR: cpa-app
+  PREACT_DIR: preact-app
   NG_DIR: ng-app
   VUE_DIR: vue-app
   INFERNO_DIR: inferno-app
@@ -35,7 +35,7 @@ tasks:
     global: >
       @sh yarn global add
       create-react-app
-      create-preact-app
+      preact-cli
       create-inferno-app
       ember-cli/ember-cli
       vue-cli
@@ -154,33 +154,33 @@ tasks:
       - inferno:build
       - [inferno:serve, inferno:lighthouse]
 
-  ### Create *Preact App
-  (cpa):
+  ### preact
+  (preact):
     clean:
-      - '@sh rm -rf $CPA_DIR'
+      - '@sh rm -rf $PREACT_DIR'
     init: >
-      @npm create-preact-app $CPA_DIR
+      @npm preact create --type empty $PREACT_DIR
     build: >
-      @sh cd $CPA_DIR
+      @sh cd $PREACT_DIR
       && yarn run build
     serve: >
-      @sh pushstate-server $CPA_DIR/build $PORT
+      @sh pushstate-server $PREACT_DIR/build $PORT
     perf-battle: >
       @npm perf-battle
       http://localhost:$PORT
       --reporter size
       --output json
-      --outFile results/cpa.json
+      --outFile results/preact.json
 
     lighthouse:
-      - cpa:perf-battle
+      - preact:perf-battle
       - '@cb exit'
 
-  cpa-run:
-    description: Create production *Preact app & test in lighthouse
+  preact-run:
+    description: Create production Preact app & test in lighthouse
     tasks:
-      - cpa:build
-      - [cpa:serve, cpa:lighthouse]
+      - preact:build
+      - [preact:serve, preact:lighthouse]
 
 
   ### ANGULAR 2
