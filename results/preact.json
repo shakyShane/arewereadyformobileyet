@@ -1,0 +1,86 @@
+{
+  ".ico": {
+    "items": [
+      {
+        "url": "/favicon.ico",
+        "totalBytes": 4858,
+        "totalKb": "5 KB",
+        "totalMs": "20ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "favicon.ico",
+          "ext": ".ico",
+          "name": "favicon"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 4858,
+      "pretty": "4.86 kB"
+    }
+  },
+  ".js": {
+    "items": [
+      {
+        "url": "/bundle.js",
+        "totalBytes": 4733,
+        "totalKb": "5 KB",
+        "totalMs": "20ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "bundle.js",
+          "ext": ".js",
+          "name": "bundle"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 4733,
+      "pretty": "4.73 kB"
+    }
+  },
+  "": {
+    "items": [
+      {
+        "url": "/",
+        "totalBytes": 827,
+        "totalKb": "1 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "",
+          "ext": "",
+          "name": ""
+        }
+      }
+    ],
+    "total": {
+      "bytes": 827,
+      "pretty": "827 B"
+    }
+  },
+  ".css": {
+    "items": [
+      {
+        "url": "/style.css",
+        "totalBytes": 422,
+        "totalKb": "0 KB",
+        "totalMs": "0ms",
+        "parsed": {
+          "root": "/",
+          "dir": "/",
+          "base": "style.css",
+          "ext": ".css",
+          "name": "style"
+        }
+      }
+    ],
+    "total": {
+      "bytes": 422,
+      "pretty": "422 B"
+    }
+  }
+}

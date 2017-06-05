@@ -1,6 +1,6 @@
 {
-  "cpa": {
-    "title": "Create Preact App",
+  "preact-cli": {
+    "title": "Preact CLI",
     "framework": "Preact",
     "firstRender": 412
   },
