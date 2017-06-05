@@ -31,6 +31,10 @@ env:
 
 tasks:
 
+  readme:
+    description: Update the table in the readme
+    tasks: '@npm node write'
+
   (install):
     global: >
       @sh yarn global add

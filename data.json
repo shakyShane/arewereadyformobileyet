@@ -1,5 +1,5 @@
 {
-  "preact-cli": {
+  "preact": {
     "title": "Preact CLI",
     "framework": "Preact",
     "firstRender": 412

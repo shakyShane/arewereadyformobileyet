@@ -1,29 +1,29 @@
 [
   {
     "item": {
-      "title": "Create Preact App",
+      "title": "Preact CLI",
       "framework": "Preact",
       "firstRender": 412
     },
     "json": {
       "items": [
         {
-          "url": "…js/main.a501e8b2.js",
-          "totalBytes": 9294,
-          "totalKb": "9 KB",
-          "totalMs": "40ms",
+          "url": "/bundle.js",
+          "totalBytes": 4733,
+          "totalKb": "5 KB",
+          "totalMs": "20ms",
           "parsed": {
-            "root": "",
-            "dir": "…js",
-            "base": "main.a501e8b2.js",
+            "root": "/",
+            "dir": "/",
+            "base": "bundle.js",
             "ext": ".js",
-            "name": "main.a501e8b2"
+            "name": "bundle"
           }
         }
       ],
       "total": {
-        "bytes": 9294,
-        "pretty": "9.29 kB"
+        "bytes": 4733,
+        "pretty": "4.73 kB"
       }
     },
     "img": "img/preact.png"
